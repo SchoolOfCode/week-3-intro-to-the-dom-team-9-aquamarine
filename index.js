@@ -60,3 +60,29 @@ console.log(fruitList);
 // The console should display a collection (NodeList) of child nodes of the <ul> element, which includes the <li> elements as well as any whitespace or line breaks.
 
 // 2b
+const allFruits = document.querySelector("#itemList").childNodes;
+console.log(allFruits);
+
+
+// Instructions:
+// Select the <ul> element with the id of "itemList".
+// Use the children property to get all its element children.
+// Log the element children to the console.
+// Expected Outcome:
+// The console should display a HTMLCollection of five <li> elements.
+
+// 2c
+const fruitElements = document.querySelector("#itemList").children;
+console.log(fruitElements);
+
+// Instructions:
+// Select the <ul> element with the id of "itemList".
+// Use the firstChild and lastChild properties to get the first and last child nodes.
+// Log both child nodes to the console.
+// Expected Outcome:
+// The console should display two nodes. Depending on the formatting of your HTML, the first may be a text node (whitespace or line break). The last should be the <li> element with the content "🍈 Fig".
+
+// 2d
+const firstFruitChild = document.querySelector("#itemList").firstElementChild;
+const lastFruitChild = document.querySelector("#itemList").lastElementChild;
+console.log(firstFruitChild,lastFruitChild);
