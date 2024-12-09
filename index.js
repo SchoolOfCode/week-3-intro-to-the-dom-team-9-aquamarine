@@ -86,3 +86,57 @@ console.log(fruitElements);
 const firstFruitChild = document.querySelector("#itemList").firstElementChild;
 const lastFruitChild = document.querySelector("#itemList").lastElementChild;
 console.log(firstFruitChild,lastFruitChild);
+
+// //Ticket 3a: Styling Elements
+// Instructions:
+// Select the <h1> element with the id of "title".
+// Change its text color to "red" and font size to "30px" using JavaScript.
+// Expected Outcome:
+// The heading "Intro to the DOM" should appear in red and its font size should be 30px.
+//.setAttributes = ("style", "color: red; font-size: 30px;");
+
+//const redTitle = domTitle.style.color ="red";
+
+
+//console.log(domTitle);
+
+
+document.getElementById("title").style.color = "red";
+
+document.getElementById("title").style.fontSize = "30px";
+
+
+
+// Ticket 3b: Creating and Adding Elements
+// Instructions:
+// Create a new <p> element.
+// Set its text content to "This is a dynamically added paragraph.".
+// Append it to the end of the body using JavaScript.
+// Expected Outcome:
+// A new paragraph with the text "This is a dynamically added paragraph." should appear at the bottom of the page.
+
+const body = document.querySelector("body")
+
+const dynaParagraph = document.createElement("p");
+
+//Method A
+
+const dynaText = document.createTextNode("This is a dynamically added paragraph");
+
+dynaParagraph.appendChild(dynaText);
+
+// Method B
+//dynaParagraph.textContent= "This is a dynamically added paragraph."
+
+
+body.appendChild(dynaParagraph);
+
+
+
+// Ticket 3c: Modifying Text
+
+// Instructions:
+// Select the first <p> element with the class "content".
+// Change its text content to "This paragraph has been updated." using JavaScript.
+// Expected Outcome:
+// The text of the first paragraph with class "content" should now read "This paragraph has been updated."
